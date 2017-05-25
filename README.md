@@ -17,11 +17,14 @@ Python 3.6
 Install:
 
  sudo pip install virtualenv
+ 
  sudo pip install Flask
 
 
  run:
 
  . venv/bin/activate
+
 export FLASK_APP=skyForm.py
+
 flask run
