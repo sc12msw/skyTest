@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+  <title>Hello from Flask</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class="container">
+  <h1> User Table </h1>
+  <form class="form-group" method="post">
+    <table class="table table-striped">
+      <tr>
+        <th>Select</th>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+      {% for person in data %}
+      <tr>
+        <!--<td>
+          <input class="userCheck" type="checkbox" name="id[{{person.id}}]" value="{{person.id}}">
+        </td> -->
+        <td><input class="form-control" type="text" name="firstname[{{person.id}}]" value="{{person.firstname}}" /></td>
+        <td><input class="form-control" type="text" name="surname[{{person.id}}]" value="{{person.surname}}" /></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <input class="btn btn-primary" type="submit" value="OK" />
+  </div>
+</form>
