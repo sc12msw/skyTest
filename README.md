@@ -1,5 +1,6 @@
 For this tect test for SkyBet I decided to try learn a new python framework to create a very light weight restful web app to control a form.
 I chose flask due to its very simple start up and useful libraries to create this.
+I also used the jquery.serialize-object library by macek https://github.com/macek/jquery-serialize-object to get the json in the correct object format as specified in the html template.
 
 The plan is to:
 1. Create a local JSON file on disk, read from this file to populate a form with peoples first and second name. By using the root dirctory and GET request.
@@ -17,7 +18,7 @@ Python 3.6
 Install:
 
  sudo pip install virtualenv \n
- 
+
  sudo pip install Flask
 
 
