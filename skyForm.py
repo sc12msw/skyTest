@@ -14,9 +14,9 @@ def form():
     if request.method == 'POST':
         ##If form posted get the dictionary and remove array number
         ##This is not effcient and could be improved by reciveving json directly from request with .get_json.
-        if request.form:
-            post = request.form
-            
+        if request.json:
+            data = request.json
+            print(data)
             writeToFile(data)
             return render_template('form.html', data=readFromFile())
         else:
